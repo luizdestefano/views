@@ -10,10 +10,11 @@ class CursosController extends Controller
     'Lógica de programação', 'Desenvolvimento Web com PHP',
     'Algoritmos e estrutura de dados', 'Test Driven Development'
     );
-    
+
     //
     public function index()
     {
+    $cursos = $this->cursos;
     return view('cursos.index', compact('cursos')); //compact cria um array associativo, deve usar o mesmo nome da variável que recebeu o array
                 //cursos.index é igual a cursos/index
     }
